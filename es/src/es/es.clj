@@ -6,7 +6,7 @@
    [clojurewerkz.elastisch.rest.index :as esi]
    [clojurewerkz.elastisch.rest.document :as esd]))
 
-(esr/connect! "http://192.168.100.81:9200")
+(esr/connect! "http://127.0.0.1:9200")
 
 (defn create-custom-index [name]
   "Create the index, all settings here are the same as the regular json. things like :store becomes \"store\", so its
