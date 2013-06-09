@@ -20,7 +20,6 @@
                   :properties {:gram    {:type "string" :store "yes" :compress "true" :index_options "docs" :omit_norms "true"}
                                :freq    {:type "long"   :store "yes" :compress "true" :index_options "docs" :omit_norms "true" :index "not_analyzed"}}}}))
 
-
 (defn upload-file [file]
   "a quick and (very) dirty implementation, waiting between each batch so we wont hit a connection error.."
   (let [parts (partition-all 5000 (clojure.string/split-lines (slurp file)))]
@@ -29,7 +28,6 @@
                      (let [[gram freq] (clojure.string/split line #"\t")]
                        (esd/create "test" "test" {:gram gram :freq freq}))) lines))
       (Thread/sleep 10000))))
-
 
 (defn -main []
   (create-custom-index "test")
