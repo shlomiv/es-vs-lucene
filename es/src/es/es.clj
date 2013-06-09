@@ -15,8 +15,7 @@
       :settings {"number_of_shards" 1
                  "number_of_replicas" 0}
       :mappings {:test 
-                 {        
-                  :_source {:enabled "false" }
+                 {:_source {:enabled "false" }
                   :_all    {:enabled "false" }
                   :properties {:gram    {:type "string" :store "yes" :compress "true" :index_options "docs" :omit_norms "true"}
                                :freq    {:type "long"   :store "yes" :compress "true" :index_options "docs" :omit_norms "true" :index "not_analyzed"}}}}))
