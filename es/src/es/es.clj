@@ -12,17 +12,14 @@
   "Create the index, all settings here are the same as the regular json. things like :store becomes \"store\", so its
    just more convenient "
   (esi/create name 
-              :settings
-                        {"number_of_shards" 1
-                         "number_of_replicas" 0}
-              :mappings 
-                        {:test 
-                         {        
-                          :_source {:enabled "false" }
-                          :_all    {:enabled "false" }
-                          :properties {:gram    {:type "string" :store "yes" :compress "true" :index_options "docs" :omit_norms "true"}
-                                       :freq    {:type "long"   :store "yes" :compress "true" :index_options "docs" :omit_norms "true" :index "not_analyzed"}
-                                       }}}))
+      :settings {"number_of_shards" 1
+                 "number_of_replicas" 0}
+      :mappings {:test 
+                 {        
+                  :_source {:enabled "false" }
+                  :_all    {:enabled "false" }
+                  :properties {:gram    {:type "string" :store "yes" :compress "true" :index_options "docs" :omit_norms "true"}
+                               :freq    {:type "long"   :store "yes" :compress "true" :index_options "docs" :omit_norms "true" :index "not_analyzed"}}}}))
 
 
 (defn upload-file [file]
