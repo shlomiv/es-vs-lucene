@@ -8,7 +8,7 @@ there are two folders:
  * **lucene** - this one is written in java, to keep it looking like the code we actually use.
  
 # Instructions on how to run both tests
-Both projects are using lein as their buildtool, so get it from [here](https://github.com/technomancy/leiningen#installation)
+Both projects are using lein2 as their buildtool, so get it from [here](https://github.com/technomancy/leiningen#installation)
 
 ## ES
 after cloning this repo:<br>
