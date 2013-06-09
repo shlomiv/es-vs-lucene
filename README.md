@@ -33,3 +33,5 @@ lein javac
 lein run -m test.Indexer
 ```
 Once done, you will have a new folder lucene/luc-index, which contains the optimized lucene index.
+
+you can see the lucene dependency in [project.clj](https://github.com/vadali/es-vs-lucene/blob/master/lucene/project.clj), this is maven competible and actually grabs that version of lucene from the public maven repository.
