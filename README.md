@@ -16,7 +16,7 @@ the default configuration is that ES is running on 127.0.0.1. if its not, edit t
 
 ```bash
 cd es
-lein run -m es.es/-main
+lein run -m es.es
 ```
 
 this will upload the data to the lucene server, under the index "test".
