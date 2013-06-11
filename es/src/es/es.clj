@@ -17,8 +17,8 @@
       :mappings {:test 
                  {:_source {:enabled "false" }
                   :_all    {:enabled "false" }
-                  :properties {:gram    {:type "string" :store "yes" :compress "true" :index_options "docs" :omit_norms "true"}
-                               :freq    {:type "long"   :store "yes" :compress "true" :index_options "docs" :omit_norms "true" :index "not_analyzed"}}}}))
+                  :properties {:gram    {:type "string" :store "yes" :compress "true" :index_options "docs" :omit_term_freq_and_positions "true" :omit_norms "false"}
+                               :freq    {:type "long"   :store "yes" :compress "true" :index_options "docs" :omit_term_freq_and_positions "true" :omit_norms "true" :index "not_analyzed"}}}}))
 
 (defn upload-file [file]
   "a quick and (very) dirty implementation, waiting between each batch so we wont hit a connection error.."
