@@ -8,7 +8,7 @@ there are two folders:
  * **lucene** - this one is written in java, to keep it looking like the code we actually use.
  
 # Instructions on how to run both tests
-Both projects are using lein as their buildtool, so get it from [here](https://github.com/technomancy/leiningen#installation)
+Both projects are using lein2 as their buildtool, so get it from [here](https://github.com/technomancy/leiningen#installation)
 
 ## ES
 after cloning this repo:<br>
@@ -16,7 +16,7 @@ the default configuration is that ES is running on 127.0.0.1. if its not, edit t
 
 ```bash
 cd es
-lein run -m es.es/-main
+lein run -m es.es
 ```
 
 this will upload the data to the lucene server, under the index "test".

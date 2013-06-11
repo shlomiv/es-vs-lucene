@@ -2,7 +2,7 @@
   (:use [clojure.pprint]))
 
 (defn prep-file []
-  (def words-file  (into [] (clojure.string/split-lines (slurp "/home/shlomiv/ginger/rnd/es-vs-luc/es/words.txt"))))
+  (def words-file  (into [] (clojure.string/split-lines (slurp "/home/shlomiv/es-vs-luc/es/words.txt"))))
   (def max (count words-file))
 
   (def five-grams (partition 5 (repeatedly #(rand-int max) )))
